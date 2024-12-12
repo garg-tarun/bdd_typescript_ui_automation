@@ -24,7 +24,7 @@ Before(async function (this:CustomWorld) {
     const mgr = new BrowserManager(TestConfig);
     // Launch browser
     this.browser = await mgr.launchBrowser(this.browserType);
-    logger.info(`name : ${this.browserType}`);
+    logger.info(`Command line input browser type : ${this.browserType}`);
     // Create new browser context
     this.browserContext = await this.browser.newContext(
         {
@@ -53,7 +53,7 @@ After(async function (this:CustomWorld, { pickle, result }) {
             });
             this.attach(image, 'image/png');
         } else {
-            console.error('this.page is undefined');
+            console.error('this.page is not initialised');
         }
     }
 
