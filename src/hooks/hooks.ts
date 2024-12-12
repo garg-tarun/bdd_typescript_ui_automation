@@ -53,7 +53,7 @@ After(async function (this:CustomWorld, { pickle, result }) {
             });
             this.attach(image, 'image/png');
         } else {
-            console.error('pageFixture.page is undefined');
+            console.error('this.page is undefined');
         }
     }
 
