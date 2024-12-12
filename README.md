@@ -45,7 +45,7 @@ Install Node.js and npm from [Node.js](https://nodejs.org/).
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourproject.git
+   git clone  https://github.com/garg-tarun/bdd_typescript_ui_automation.git
 
 2. Install node modules:
    ```bash
