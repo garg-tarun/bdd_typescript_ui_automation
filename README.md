@@ -43,6 +43,8 @@ Install Node.js and npm from [Node.js](https://nodejs.org/).
 
 ## Running Tests
 
+UI Test is run successfully on Macbook with apple silicon running os version 15.1.1.
+
 1. Clone the repository:
    ```bash
    git clone  https://github.com/garg-tarun/bdd_typescript_ui_automation.git
