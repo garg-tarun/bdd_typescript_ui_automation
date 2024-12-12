@@ -1,0 +1,26 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:debug": "cucumber-js src/features/*.feature --require-module ts-node/register --require src/step-definitions/**/*.ts  --require src/hooks/**/*.ts --world-parameters '{\"debug\": true}'",
+    "cucumber": "cucumber-js src/features/*.feature --require-module ts-node/register --require src/step-definitions/**/*.ts  --require src/hooks/**/*.ts -f json:./reports/report.json --format html:./reports/report.html",
+    "precucumber": "rimraf downloads reports && mkdir reports && mkdir downloads"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@colors/colors": "^1.6.0",
+    "@cucumber/cucumber": "^11.1.0",
+    "@faker-js/faker": "^9.3.0",
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.1",
+    "dotenv": "^16.4.7",
+    "rimraf": "^6.0.1",
+    "sharp": "^0.33.5",
+    "ts-node": "^10.9.2",
+    "winston": "^3.17.0"
+  }
+}
