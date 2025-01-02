@@ -1,5 +1,6 @@
+@regression
 Feature: Image Generation Functionality
-
+    @smoke
     Scenario: Verify user can navigate to Create Your Custom Scrambler Ducati page
         Given I am on the Ducati Scrambler website
         When I click "Start to Create"

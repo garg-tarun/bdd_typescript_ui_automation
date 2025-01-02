@@ -22,7 +22,7 @@ export function createDirectory(directoryName:string) {
     const dirPath: string = path.join(process.cwd(), directoryName);
     // Make sure the 'downloads' folder exists, create it if necessary
     if (!fs.existsSync(dirPath)) {
-      fs.mkdirSync(dirPath);
+      fs.mkdirSync(dirPath, { recursive: true });
     }
     logger.info(`Directory created with path: ${dirPath}`);
     return dirPath;

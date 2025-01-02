@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test:debug": "cucumber-js src/features/*.feature --require-module ts-node/register --require src/step-definitions/**/*.ts  --require src/hooks/**/*.ts --world-parameters '{\"debug\": true}'",
-    "cucumber": "cucumber-js src/features/*.feature --require-module ts-node/register --require src/step-definitions/**/*.ts  --require src/hooks/**/*.ts -f json:./reports/report.json --format html:./reports/report.html",
-    "precucumber": "rimraf downloads reports && mkdir reports && mkdir downloads"
+    "cucumber_old": "cucumber-js src/features/*.feature --require-module ts-node/register --require src/step-definitions/**/*.ts  --require src/hooks/**/*.ts -f json:./reports/report.json --format html:./reports/report.html",
+    "precucumber": "rimraf videos downloads reports && mkdir reports && mkdir downloads && mkdir videos",
+    "cucumber": "ts-node ./src/index.ts"
   },
   "keywords": [],
   "author": "",
