@@ -53,11 +53,15 @@ UI Test is run successfully on Macbook with apple silicon running os version 15.
    ```bash
    npm install
 
-3. Run UI Tests on default browser:
+3. Install browsers:
+   ```bash
+   npx playwright install
+
+4. Run UI Tests on default browser:
    ```bash
    npm run cucumber
 
-4. Run UI Tests on a specific browser:
+5. Run UI Tests on a specific browser:
 
    ```bash
    npm run cucumber -- --world-parameters '{"browser":"webkit"}' 
