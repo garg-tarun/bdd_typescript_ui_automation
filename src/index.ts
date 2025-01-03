@@ -18,20 +18,19 @@ interface ProfileCommands {
 const profiles: ProfileCommands = {
     smoke: `${common} --tags "@smoke"`,
     regression: `${common} --tags "@regression"`,
-    login: `${common} --tags "@login"`,
-    contactUs: `${common} --tags "@contact-us"`,
+    all: `${common} --tags "not @all"`,
 }
 
 //Get the third command-line argument and assign it to the profile
 //i.e. smoke, regression etc
-const profile = process.argv[2];
+const profile = process.argv[2] ? process.argv[2] : "all"; 
 
 // Initialise parallel to run tests in multiple browser for different feature files
 const parallel = process.argv[3] ? process.argv[3] : 1; 
 
 //Construct the command string based on the selected profile
 //command is the full command to run the tests for the selected profile
-let command = `npx cucumber-js ${profiles[profile as 'smoke' | 'regression' | 'login' | 'contact-us']} --parallel ${parallel}`;
+let command = `npx cucumber-js ${profiles[profile as 'smoke' | 'regression' | 'login' | 'all']} --parallel ${parallel}`;
 
 //Print the constructed command
 console.log(command);
